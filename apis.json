@@ -1,0 +1,57 @@
+{
+    "name": "CloudLock",
+    "description": "The leading CASB and Cybersecurity-as-a-Service provider, protecting enterprises from compromised accounts, cloud malware, and data breaches in the cloud.",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28321-cloudlock.jpg",
+    "tags": [
+        "api service provider",
+        "have api",
+        "security"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/cloudlock\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "CloudLock",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28321-cloudlock.jpg",
+            "humanURL": "http:\/\/cloudlock.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/cloudlock-openapi.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/cloudlock"
+        },
+        {
+            "type": "Email",
+            "url": "info@cloudlock.com"
+        },
+        {
+            "type": "Email",
+            "url": "pr@cloudlock.com"
+        },
+        {
+            "type": "Email",
+            "url": "support@cloudlock.com"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/cloudlock"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/cloudlock.com"
+        }
+    ]
+}
