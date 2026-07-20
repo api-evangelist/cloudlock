@@ -1,0 +1,24 @@
+generated: '2026-07-18'
+method: searched
+source: https://developer.cisco.com/docs/cloud-security/cloudlock-api-getting-started/
+docs: https://developer.cisco.com/docs/cloud-security/cloudlock-api-getting-started/
+summary:
+  types: [http]
+  http_schemes: [bearer]
+  notes: >-
+    The Cisco Cloudlock API (v2) authenticates every request with a Bearer access
+    token in the Authorization header. Tokens are generated per-tenant from the
+    Cloudlock dashboard under Settings > Authentication & API > Generate. There is
+    no OAuth authorization/token endpoint or scope surface documented for the
+    public API; access is scoped to the tenant the token belongs to. No public
+    OpenAPI is published (the API base host is customer-specific).
+schemes:
+  - name: bearerAuth
+    type: http
+    scheme: bearer
+    location: header
+    header: Authorization
+    format: 'Bearer <access_token>'
+    token_source: >-
+      Cloudlock dashboard: Settings > Authentication & API > Generate access token
+    sources: [https://developer.cisco.com/docs/cloud-security/cloudlock-api-getting-started/]
