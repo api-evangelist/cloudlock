@@ -1,0 +1,45 @@
+generated: '2026-07-18'
+method: searched
+source: https://developer.cisco.com/docs/cloud-security/cloudlock-api-getting-started/
+docs: https://securitydocs.cisco.com/docs/umbrella/cloudlock/user-guide/159465.dita
+api: Cisco Cloudlock API v2
+authentication:
+  style: bearer-token
+  header: Authorization
+  detail: 'Bearer access token generated per-tenant in the Cloudlock dashboard'
+  ref: authentication/cloudlock-authentication.yml
+base_path: /api/v2
+base_url_note: >-
+  The API host is customer-specific (https://{YourCloudlockAPIServer}/api/v2);
+  contact Cloudlock/Cisco support to obtain the tenant API URL.
+idempotency:
+  supported: false
+  note: No idempotency-key header or contract is documented for the Cloudlock API.
+pagination:
+  style: limit-offset
+  params:
+    - name: limit
+      in: query
+      default: 20
+      max: 100
+      description: Number of records to return per response.
+    - name: offset
+      in: query
+      default: 0
+      description: Zero-based index into the collection to start returning records from.
+  applies_to: collection endpoints (activities, incidents, entities, apps, policies, anomalies)
+versioning:
+  scheme: uri-path
+  current: v2
+  detail: Version is carried in the URI path (/api/v2/...).
+rate_limiting:
+  documented: true
+  signal: HTTP 429 Too Many Requests when the per-endpoint limit is exceeded
+  detail: >-
+    The Cloudlock API limits the number and rate of requests for each endpoint;
+    specific numeric limits are not published in the getting-started guide and can
+    depend on the Cloudlock license.
+error_envelope:
+  style: http-status-codes
+  ref: errors/cloudlock-problem-types.yml
+  note: Standard HTTP status codes signal success/failure; no RFC 9457 problem+json envelope documented.

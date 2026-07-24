@@ -1,8 +1,17 @@
 aid: cloudlock
 name: CloudLock
-description: 'CloudLock is a company surfaced as a portfolio company of bessemer-venture-partners and
-  added to the API Evangelist network as a stub for enrichment. Sector: cloud. This profile is a lead
-  awaiting the enrichment pipeline.'
+description: >-
+  CloudLock is a cloud-native Cloud Access Security Broker (CASB) that protects
+  data, users, and applications across SaaS, IaaS, PaaS, and IDaaS environments.
+  Founded in 2011 and acquired by Cisco in 2016, it is now delivered as Cisco
+  Cloudlock within Cisco Umbrella / Cisco Security Cloud. The platform uses an
+  API-driven model to discover sensitive content, detect policy violations, flag
+  anomalous user behavior, and manage cloud application (OAuth) risk. Developers
+  integrate through the Cisco Cloudlock API (v2), a Bearer-token REST API exposing
+  activities, incidents, incident entities, incident aggregates, policies, apps,
+  entities, IP libraries, and anomalies. Originally a portfolio company of Bessemer
+  Venture Partners, CloudLock's developer surface is documented on Cisco DevNet and
+  the Cisco Umbrella documentation hub.
 url: https://raw.githubusercontent.com/api-evangelist/cloudlock/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,12 +19,33 @@ x-backed-by:
 - bessemer-venture-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-acquired-by: cisco
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://cdn.umbrella.marketops.umbrella.com/wp-content/uploads/2022/03/22160233/cisco-umbrella-social-share.jpg
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Cloud
+- Security
+- CASB
+- Cloud Access Security Broker
+- Data Loss Prevention
+- Cloud Security
+- SaaS Security
+- Cisco
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +55,26 @@ maintainers:
 common:
 - type: Website
   url: https://www.cloudlock.com/
+- type: DeveloperPortal
+  url: https://developer.cisco.com/docs/cloud-security/
+- type: Documentation
+  url: https://docs.umbrella.com/cloudlock-documentation/docs/cisco-cloudlock-apis
+- type: APIReference
+  url: https://developer.cisco.com/docs/cloud-security/cloudlock-api-getting-started/
+- type: GettingStarted
+  url: https://developer.cisco.com/docs/cloud-security/cloudlock-api-getting-started/
+- type: Blog
+  url: https://www.cloudlock.com/blog/
+- type: Authentication
+  url: authentication/cloudlock-authentication.yml
+- type: Conventions
+  url: conventions/cloudlock-conventions.yml
+- type: ErrorCatalog
+  url: errors/cloudlock-problem-types.yml
+- type: DomainSecurity
+  url: security/cloudlock-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

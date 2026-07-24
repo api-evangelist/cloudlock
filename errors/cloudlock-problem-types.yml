@@ -1,0 +1,35 @@
+generated: '2026-07-18'
+method: searched
+source: https://developer.cisco.com/docs/cloud-security/cloudlock-api-getting-started/
+format: http-status
+api: Cisco Cloudlock API v2
+note: >-
+  The Cloudlock API signals outcomes with standard HTTP status codes (2xx success,
+  4xx client error, 5xx server error). No RFC 9457 application/problem+json error
+  envelope is documented. Titles/remediation below are captured from the DevNet
+  getting-started response-code reference.
+problems:
+  - status: 400
+    title: Bad Request
+    meaning: The request could not be understood due to malformed syntax.
+    action: Fix the request syntax/parameters and retry.
+  - status: 401
+    title: Unauthorized
+    meaning: Missing or invalid Bearer access token.
+    action: Generate/refresh the access token in the Cloudlock dashboard and resend with the Authorization header.
+  - status: 403
+    title: Forbidden
+    meaning: The token is valid but lacks permission for the resource, or the license does not include the endpoint.
+    action: Verify tenant permissions and Cloudlock license coverage for the endpoint.
+  - status: 404
+    title: Not Found
+    meaning: The requested resource does not exist.
+    action: Check the resource path and identifiers.
+  - status: 429
+    title: Too Many Requests
+    meaning: The per-endpoint rate limit was exceeded.
+    action: Back off and retry after slowing the request rate.
+  - status: 500
+    title: Internal Server Error
+    meaning: An unexpected server-side error occurred.
+    action: Retry later; contact Cloudlock support if it persists.
