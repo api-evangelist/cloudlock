@@ -33,15 +33,17 @@ deliveryModel:
   method: derived
 accessModel:
   pricing: unknown
-  onboarding: self-serve
+  onboarding: unknown
   trial: false
   try_now: false
   public: false
-  label: Self-serve signup
-  confidence: medium
+  label: Unknown
+  confidence: low
   source:
   - authentication
-  generated: '2026-07-22'
+  - security
+  - {url: 'https://www.cloudlock.com/', status: 301, note: 'declared website redirects to https://umbrella.cisco.com/products/cloud-access-security-broker-casb — a different registrable domain (cloudlock.com -> cisco.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)'}
+  generated: '2026-09-03'
   method: derived
 image: https://cdn.umbrella.marketops.umbrella.com/wp-content/uploads/2022/03/22160233/cisco-umbrella-social-share.jpg
 specificationVersion: '0.23'
